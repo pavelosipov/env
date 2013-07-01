@@ -7,9 +7,8 @@ ZSH_DEFAULT_USER="furj"
 
 # Paths
 ZSH_ENV_PATH=~/env/zsh
-ZSH_SETTINGS_PATH=$ZSH_ENV_PATH/settings
+ZSH_CONFIG_PATH=$ZSH_ENV_PATH/config
 ZSH_DIRCOLORS_PATH=$ZSH_ENV_PATH/dircolors/dircolors.256dark
 
-source $ZSH_SETTINGS_PATH/aliases.zsh
-
-echo DIRCOLORS_PATH=$ZSH_DIRCOLORS_PATH
+source $ZSH_CONFIG_PATH/aliases.zsh
+source $ZSH_CONFIG_PATH/options.zsh
