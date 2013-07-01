@@ -12,3 +12,4 @@ ZSH_DIRCOLORS_PATH=$ZSH_ENV_PATH/dircolors/dircolors.256dark
 
 source $ZSH_CONFIG_PATH/aliases.zsh
 source $ZSH_CONFIG_PATH/options.zsh
+source $ZSH_CONFIG_PATH/bindings.zsh
