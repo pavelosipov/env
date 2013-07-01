@@ -16,3 +16,4 @@ source $ZSH_CONFIG_PATH/bindings.zsh
 source $ZSH_CONFIG_PATH/completions.zsh
 
 source $ZSH_ENV_PATH/syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_STYLES[path]='fg=blue'
