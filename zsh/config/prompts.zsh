@@ -3,8 +3,8 @@
 # Copyright (c) Pavel Osipov <posipov84@gmail.com> 2013.
 # All rights reserved.
 
-#PS1=$'%D{%L}:%D{%M} %# '
 PS1=$'%{\e[00;38;5;166m%}%D{%L}:%D{%M} %#%{\e[0m%} '
+RPS1=$'%{\e[00;38;5;166m%}%25<..<%~%{\e[0m%}'
 #RPS1=$'%{\e[00;38;5;166m%}%D{%L}:%D{%M}%{\e[0m%}'
 #PS2=$'\e[00;38;5;166m%}%_ %{\e[0m%} '
 #PS4=$'\e[00;38;5;166m%}+%N:%i %{\e[0m%} '
