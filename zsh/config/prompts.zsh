@@ -3,15 +3,19 @@
 # Copyright (c) Pavel Osipov <posipov84@gmail.com> 2013.
 # All rights reserved.
 
-BASE_PS1=$'%{\e[00;38;5;166m%}%D{%L}:%D{%M} %#%{\e[0m%} '
-BASE_RPS1=$'%{\e[00;38;5;166m%}%25<..<%~%{\e[0m%}'
+ZSH_PROMPT_COLOR='[00;38;5;166m'
+ZSH_RESET_COLOR='[0m'
+ZSH_BASE_PS1=$'%{\e${ZSH_PROMPT_COLOR}%}%D{%L}:%D{%M} %#%{\e${ZSH_RESET_COLOR}%} '
+ZSH_BASE_RPS1=$'%{\e${ZSH_PROMPT_COLOR}%}%25<..<%~%{\e${ZSH_RESET_COLOR}%}'
 
-PS1=$BASE_PS1
-RPS1=$BASE_RPS1
+PS1=$ZSH_BASE_PS1
+PS2=$'%{\e${ZSH_PROMPT_COLOR}%}%_ %{\e${ZSH_RESET_COLOR}%}'
+PS2=$'%{\e${ZSH_PROMPT_COLOR}%}+%N:%i %{\e${ZSH_RESET_COLOR}%}'
+RPS1=$ZSH_BASE_RPS1
 
 function zle-line-init zle-keymap-select {
-    PS1="${${KEYMAP/vicmd/${CMD_MODE_PS1}}/(main|viins)/${BASE_PS1}}"
-    RPS1=$BASE_RPS1
+    PS1="${${KEYMAP/vicmd/${CMD_MODE_PS1}}/(main|viins)/${ZSH_BASE_PS1}}"
+    RPS1=$ZSH_BASE_RPS1
 
     zle reset-prompt
     zle -R
@@ -25,11 +29,11 @@ function zle-line-finish {
 	echo $BUFFER | sed -e 's/^\s\+//' | sed -e 's/\s\+$//' | read cmd
 
 	if [[ $cmd = "" ]]; then
-		PS1=${BASE_PS1:s/'%D{%L}:%D{%M}'/}
+		PS1=${ZSH_BASE_PS1:s/'%D{%L}:%D{%M}'/}
 	elif [[ $cmd = $last_cmd ]]; then
-		PS1=${BASE_PS1:s/'%D{%L}:%D{%M}'/'!'$hnum}
+		PS1=${ZSH_BASE_PS1:s/'%D{%L}:%D{%M}'/'!'$hnum}
 	else
-		PS1=${BASE_PS1:s/'%D{%L}:%D{%M}'/'!%h'}
+		PS1=${ZSH_BASE_PS1:s/'%D{%L}:%D{%M}'/'!%h'}
     fi
 	RPS1=''
 
