@@ -4,3 +4,6 @@
 [submodule "zsh/syntax-highlighting"]
 	path = zsh/syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "iterm/themes"]
+	path = iterm/themes
+	url = https://github.com/JamieMason/All-iTerm-Colors.git
