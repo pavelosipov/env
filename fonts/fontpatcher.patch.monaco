@@ -1,0 +1,22 @@
+diff --git fontpatcher/fontpatcher fontpatcher/fontpatcher
+index 2c54a3f..44a1792 100755
+--- fontpatcher/fontpatcher
++++ fontpatcher/fontpatcher
+@@ -164,7 +164,7 @@ for font_path in args.fonts:
+ 			# Stretch the glyph vertically
+ 			scale_ratio = font_dim['height'] / sym_dim['height']
+ 
+-			font.transform(psMat.scale(1, scale_ratio))
++			font.transform(psMat.scale(1, scale_ratio * 1.1))
+ 
+ 		# Use the dimensions from the pasted and stretched glyph
+ 		sym_dim = get_dim(font[sym_glyph.unicode])
+@@ -177,7 +177,7 @@ for font_path in args.fonts:
+ 		font.transform(psMat.translate(0, font_dim['ymax'] - sym_dim['ymax']))
+ 
+ 		# Then move it the y center difference
+-		font.transform(psMat.translate(0, sym_ycenter - font_ycenter))
++		font.transform(psMat.translate(0, sym_ycenter - font_ycenter - 70))
+ 
+ 		# Ensure that the glyph doesn't extend outside the font's bounding box
+ 		if sym_dim['width'] > font_dim['width']:
