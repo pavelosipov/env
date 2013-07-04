@@ -17,3 +17,5 @@ This is a repository with my settings for iTerm2 and zsh. Here is how my termina
   1. Clone this repository with submodules.
   2. Import Wombat.itermcolors color scheme in iTerm settings.
   3. Make soft link ~/.zshrc -> path-to-repository/zsh/main.zsh
+  4. Update ZSH_ENV_PATH variable in path-to-repository/zsh/main.zsh
+
