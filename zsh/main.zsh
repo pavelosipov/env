@@ -20,6 +20,11 @@ source $ZSH_CONFIG_PATH/options.zsh
 source $ZSH_CONFIG_PATH/bindings.zsh
 source $ZSH_CONFIG_PATH/prompts.zsh
 source $ZSH_CONFIG_PATH/completions.zsh
-
 source $ZSH_ENV_PATH/syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_STYLES[path]='fg=blue'
+
+# Personal
+if [ -f $ZSH_CONFIG_PATH/personal.zsh ]
+then
+    source $ZSH_CONFIG_PATH/personal.zsh
+fi
