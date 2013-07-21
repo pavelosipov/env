@@ -4,7 +4,8 @@
 # All rights reserved.
 
 # Paths
-ZSH_ENV_PATH=~/env/zsh
+ENV_PATH=~/env
+ZSH_ENV_PATH=$ENV_PATH/zsh
 ZSH_CONFIG_PATH=$ZSH_ENV_PATH/config
 ZSH_DIRCOLORS_PATH=$ZSH_ENV_PATH/dircolors/dircolors.256dark
 
