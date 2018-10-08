@@ -1,6 +1,3 @@
 [submodule "zsh"]
 	path = zsh
 	url = https://github.com/pavelosipov/environment-zsh.git
-[submodule "iterm/themes"]
-	path = iterm/themes
-	url = https://github.com/JamieMason/All-iTerm-Colors.git
